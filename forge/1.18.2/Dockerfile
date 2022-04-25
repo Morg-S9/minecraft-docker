@@ -9,8 +9,7 @@ RUN java -jar forge-1.18.2-40.1.0-installer.jar --installServer
 RUN echo eula=true >eula.txt
 
 # Configuration
-VOLUME /var/minecraft/mods
-VOLUME /var/minecraft/config
+VOLUME /var/minecraft
 RUN rm run.sh
 COPY run.sh /var/minecraft/run.sh
 COPY configure.sh /var/minecraft/configure.sh
